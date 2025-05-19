@@ -1,0 +1,8 @@
+[package]
+name = "click_the_circle"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ratatui = "0.26"
+crossterm = "0.27"
