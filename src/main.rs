@@ -10,7 +10,7 @@ use ratatui::{
     widgets::{Block, Borders, Tabs, Paragraph},
     layout::{Layout, Constraint, Direction},
     style::{Style, Color},
-    text::Spans,
+    text::Span,
 };
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -47,9 +47,9 @@ fn run_app(terminal: &mut Terminal<CrosstermBackend<std::io::Stdout>>) -> io::Re
                 ])
                 .split(f.size());
 
-            let tab_titles: Vec<Spans> = tabs
+            let tab_titles: Vec<Span> = tabs
                 .iter()
-                .map(|t| Spans::from(*t))
+                .map(|t| Span::from(*t))
                 .collect();
 
             let tabs_widget = Tabs::new(tab_titles)
